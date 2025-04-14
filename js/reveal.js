@@ -840,21 +840,33 @@ export default function( revealElement, options ) {
 						continue;
 					}
 
-					if( ( config.center || slide.classList.contains( 'center' ) ) ) {
+					if ( i === 0) {
+						slide.style.top = Math.max( ( size.height - slide.scrollHeight ) / 2, 0 ) + 'px';
+					}
+					else if( ( config.center || slide.classList.contains( 'center' ) ) ) {
 						// Vertical stacks are not centred since their section
 						// children will be
-						if( slide.classList.contains( 'stack' ) ) {
+						// if( slide.classList.contains( 'stack' ) ) {
 							slide.style.top = 0;
+						// }
+						// else {
+						// 	slide.style.top = Math.max( ( size.height - slide.scrollHeight ) / 2, 0 ) + 'px';
+						// }
 						}
-						else {
-							slide.style.top = Math.max( ( size.height - slide.scrollHeight ) / 2, 0 ) + 'px';
-						}
-					}
 					else {
 						slide.style.top = '';
 					}
 
-				}
+					// add borders to slides
+					// slide.style.border = 'border: 1px solid #1C498F; border-radius: 12px;';
+					// var parentDiv = slide.parentNode;
+					// if (slide.parentNode.tagName === 'DIV') {
+					// 	slide.style.border = '1px solid #1C498F';
+					// 	slide.style.borderRadius = '12px';
+					// 	slide.style.padding = '10px';
+					// }
+					// console.log(slide);
+			    }
 
 				if( oldScale !== scale ) {
 					dispatchEvent({
