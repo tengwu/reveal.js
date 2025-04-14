@@ -20,7 +20,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 :root {
   --r-background-color: #f7fbfc;
   --r-main-font: Open Sans, sans-serif;
-  --r-main-font-size: 40px;
+  --r-main-font-size: 30px;
   --r-main-color: #333;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
@@ -142,6 +142,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   box-sizing: border-box; /* 确保宽度计算包含 padding */
 }
 
+.figure p {
+  text-align: center !important; /* 强制文本左对齐 */
+}
+
 /* Remove trailing margins after titles */
 .reveal h1:last-child,
 .reveal h2:last-child,
@@ -158,6 +162,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal iframe {
   max-width: 95%;
   max-height: 95%;
+  box-shadow: 1px 2px 4px 0 rgba(34, 36, 38, 0.12);
 }
 
 .reveal strong,
@@ -207,10 +212,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   display: block;
   position: relative;
   width: 90%;
-  margin: var(--r-block-margin) auto;
-  padding: 5px;
+  margin: 2px 12px;
+  padding: 2px 12px;
   font-style: italic;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(194, 189, 189, 0.108);
   text-align: left;
   font-size: 0.75em;
   font-family: "Times New Roman", "仿宋";
@@ -229,14 +234,14 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 
 .reveal pre {
-  display: block;
+  display: inline-block;
   position: relative;
   width: 90%;
-  margin: var(--r-block-margin) auto;
+  padding: 18px 16px;
   text-align: left;
-  font-size: 0.55em;
-  font-family: var(--r-code-font);
-  line-height: 1.2em;
+  font-size: 0.75em;
+  line-height: 1.55em;
+  background: rgba(194, 189, 189, 0.108);
   word-wrap: break-word;
   box-shadow: 2px 5px 15px rgba(0.1, 0.1, 0.1, 0.15);
   font-family: "Times New Roman", "仿宋";
@@ -274,12 +279,11 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .reveal table th {
   font-weight: bold;
-  text-align: left;
-  font-size: 0.75em;
-  font-family: "Times New Roman", "仿宋";
+  text-align: center;
   line-height: 1.55em;
   word-wrap: break-word;
-  box-shadow: 2px 5px 15px rgba(0.1, 0.1, 0.1, 0.15);
+  padding: 0.2em 0.2em 0.2em 0.2em;
+  border-bottom: 1px solid;
 }
 
 .reveal table td {
